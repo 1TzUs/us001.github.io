@@ -1,48 +1,131 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
- <head>
+<head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width , initial-scale=1">
-  <!-- 
-   增加这句后，可以看到浏览器的DevTools面板的模拟移动设备状态的变化
-  -->
-  <title>Welcome to myCTApp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>学习笔记</title>
   <style>
-    
-    body{
-      font-size: 30px;
-    }
-    header{
-      border: 2px solid blue;
-      height: 200px;
+    /* Custom styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
     }
 
-    main{
-      border: 2px solid blue;
-      height: 400px;
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
     }
 
-    footer{
-      border: 2px solid blue;
-      height: 100px;
+    header {
+      background-color: #409EFF;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      position: relative; /* Adding relative positioning */
     }
 
-  
+    header img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    header .name {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    footer {
+      background-color: #f0f0f0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Custom button styles */
+    button {
+      background-color: #409EFF;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 4px;
+      margin: 0 5px;
+    }
+
+    button:hover {
+      background-color: #007BFF;
+    }
+
+    /* Card styles */
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 20px;
+      margin-top: 20px;
+      background-color: #f9f9f9;
+    }
+
+    .card h2 {
+      margin-top: 0;
+    }
   </style>
- </head> 
- <body>
-  <header>
-     《计算思维和语言学习》
-  </header>
+</head>
+<body>
+  <div id="app">
+    <header>
+      <img src="myface\xiahao.jpg" alt="夏豪">
+      <span class="name">Your Name</span>
+      <h1>学习笔记</h1>
+    </header>
 
-   <main>
-	   ‘读好书、练思维、勤编程’ @masterLijh 计算思维系列课程
-   </main>
+    <main>
+      <div class="container" id="vueBasics" style="display: block;">
+        <div class="card">
+          <h2>Vue 基础</h2>
+          <p>#</p>
+        </div>
+      </div>
+      <div class="container" id="vueComponents" style="display: none;">
+        <div class="card">
+          <h2>Vue 组件</h2>
+          <p>#</p>
+        </div>
+      </div>
+      <div class="container" id="vueRouter" style="display: none;">
+        <div class="card">
+          <h2>Vue 路由</h2>
+          <p>#</p>
+        </div>
+      </div>
+      <!-- 添加按钮以在不同的章节部分之间切换 -->
+      <div style="text-align: center; margin-top: 20px;">
+        <button onclick="showSection('vueBasics')">Vue 基础</button>
+        <button onclick="showSection('vueComponents')">Vue 组件</button>
+        <button onclick="showSection('vueRouter')">Vue 路由</button>
+      </div>
+    </main>
 
-  <footer> 
-	CopyRight from 李健宏 江西科技师范大学 2022--2025
-  </footer> 
-  
- </script>
- </body>
+    <footer>
+      © 2024 学习笔记. All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    function showSection(sectionId) {
+      var sections = document.querySelectorAll('.container');
+      for (var i = 0; i < sections.length; i++) {
+        sections[i].style.display = 'none';
+      }
+      document.getElementById(sectionId).style.display = 'block';
+    }
+  </script>
+</body>
 </html>
