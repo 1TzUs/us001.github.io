@@ -7,18 +7,22 @@
    增加这句后，可以看到浏览器的DevTools面板的模拟移动设备状态的变化
   -->
   <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
     body{
       font-size: 26px;
       text-align: center;
     }
     header{
       border:2px solid blue;
-      height: 10%;
+      height: 15%;
       background-color: blue;
       color: white;
     }
     main{
-      height: 75%;
+      height: 65%;
       background-image: url('./lesson/Http.jpg');
       background-repeat: no-repeat;
       background-position: center;
@@ -26,7 +30,7 @@
     }
     nav{
       border:2px solid blue;
-      height: 5%;
+      height: 10%;
     }
     footer{
       border:2px solid blue;
@@ -40,7 +44,7 @@
     }
     button{
       font-size: 1.2em;
-      margin-right: 1.2em;
+      margin-right: 1em;
     }
 
   </style>
@@ -50,7 +54,6 @@
  <body>
   <header>
     <p id="book">计算机系列课程@夏豪</p>
-     
   </header>
 
     <nav>
@@ -76,7 +79,7 @@
         UI.deviceWidth = window.innerWidth;
         UI.deviceHeight = window.innerHeight;
         document.body.style.height = UI.deviceHeight + 'px';
-        document.body.style.fontSize = UI.deviceWidth / 25 + 'px';
+        document.body.style.fontSize = UI.deviceWidth / 33 + 'px';
   </script>
  </body>
 </html>
